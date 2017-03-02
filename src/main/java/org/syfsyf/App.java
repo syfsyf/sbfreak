@@ -1,10 +1,14 @@
 package org.syfsyf;
 
+
+import javafx.scene.paint.Color;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+
+
 
 @SpringBootApplication
 @EnableCaching
@@ -17,12 +21,9 @@ public class App implements CommandLineRunner{
 
     @Override
     public void run(String... strings) throws Exception {
-        cacheService.hallo();
-        cacheService.hallo();
-        cacheService.hallo();
-        cacheService.hallo();
-        cacheService.hallo();
-        cacheService.hallo();
-        cacheService.hallo();
+
+
+        cacheService.create(Color.WHITE,Color.YELLOW);
+        cacheService.create(Color.WHITE,Color.YELLOW);
     }
 }
