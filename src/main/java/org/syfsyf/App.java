@@ -15,6 +15,10 @@ import org.springframework.cache.annotation.EnableCaching;
 public class App implements CommandLineRunner{
     @Autowired
     CacheService cacheService;
+
+    @Autowired
+    MyComponent myComponent;
+
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
     }
